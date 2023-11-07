@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EmployeeController;
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +26,10 @@ Route::get('/home', function () {
 
 Route::get('/employees/add', function () {
     return view('employees.formadd');
+});
+
+Route::group(['middleware' => 'guest'], function (){
+    Route::get('/register', [AuthController::class, 'register'])->name('register');
 });
 
 Route::resource('employees', EmployeeController::class);
