@@ -11,11 +11,17 @@
     <div class="container justify-content-center">
         <div class="col-lg-15">
         <div class="row justify-content-center mt-5">
-
+            <form action="{{ route('login') }}" method="POST">
+            @csrf
             <div class="card-header">
                 <h1 class="card-title">Login</h1>
             </div>
             <div class="card-body">
+                @if (Session::has('error'))
+                <div class="alert alert-danger" role="alert">
+                    {{ Session::get('error') }}
+                </div>
+                @endif
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
                     <input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="name@example.com" required>
@@ -29,6 +35,7 @@
                         <button class='btn btn-primary btn-sm'>Login</button>
                     </div>
                 </div>
+            </form>
             </div>
         </div>
         </div>
