@@ -7,7 +7,7 @@
             Form Data Karyawan
         </div>
         <div class="card-body">
-            <button onclick="window.location('{{ employees/ }}')" class="btn btn-primary" type="button">Kembali</button>
+            <button class="btn btn-sm btn-warning" type="button" onclick="window.location.href = '{{ url('employees') }}'">Kembali</button>
         </div>
         <div class="card-body">
             <form method="POST" action="{{ url('employees/') }}">

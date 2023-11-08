@@ -27,7 +27,7 @@ class StoreemployeeRequest extends FormRequest
             'txtnip' => 'required|unique:employees,nip|min:8|max:10',
             'txtgender' => 'required',
             'txtemail' => 'required|email|unique:employees,email',
-            'txtnotelp' => 'required|numeric|unique:employees,phone',
+            'txtnotelp' => 'required|numeric|unique:employees,notelp',
             'txtalamat' => 'required',
         ];
     }

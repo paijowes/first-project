@@ -31,7 +31,7 @@
                         <select class="form-select form-select-sm @error('txtgender') is-invalid @enderror" name="txtgender" id="txtgender">
                             <option value="" selected>Pilih</option>
                             <option value="M" {{ $txtgender== 'M' ? 'selected' : '' }}>Male</option>
-                            <option value="F" {{ $txtgender== 'F' ? 'selected' : '' }}>Female</option>
+                            <option value="F" {{ $txtgender== 'F' ? 'selected' : '' }}>Female<option>
                         </select>
                         @error('txtgender')
                         <div class="invalid-feedback">

@@ -50,7 +50,7 @@ class EmployeeController extends Controller
         $employees->nip = $request->txtnip;
         $employees->nama = $request->txtname;
         $employees->alamat = $request->txtalamat;
-        $employees->JenisKelamin = $request->txtgender;
+        $employees->jenisKelamin = $request->txtgender;
         $employees->email = $request->txtemail;
         $employees->notelp = $request->txtnotelp;
         $employees->save();
@@ -69,7 +69,7 @@ class EmployeeController extends Controller
             'txtname' => $data->nama,
             'txtalamat' => $data->alamat,
             'txtnotelp' => $data->notelp,
-            'txtgender' => $data->JenisKelamin,
+            'txtgender' => $data->jenisKelamin,
             'txtemail' => $data->email,
         ]);
     }
@@ -82,7 +82,7 @@ class EmployeeController extends Controller
     $data = $employees->find($nip);
     $data->nama = $request->txtname;
     $data->alamat = $request->txtalamat;
-    $data->JenisKelamin = $request->txtgender;
+    $data->jenisKelamin = $request->txtgender;
     $data->email = $request->txtemail;
     $data->notelp = $request->txtnotelp;
     $data->save();
