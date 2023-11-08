@@ -24,6 +24,13 @@
             </li>
           </ul>
         </div>
+        <div class="ml-auto">
+            <form action="{{ route('logout') }}" method="POST" class="d-flex" roles="search">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger btn-sm" type="submit">Logout</button>
+            </form>
+        </div>
       </div>
     </nav>
     {{-- Akhir Navbar --}}
