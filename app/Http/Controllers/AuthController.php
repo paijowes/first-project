@@ -37,7 +37,7 @@ class AuthController extends Controller
         ];
 
         if(Auth::attempt($credentials)){
-            return redirect('employees.data')->with('msg', 'Login Berhasil');
+            return redirect('employees')->with('msg', 'Login Berhasil');
         }
 
         return back()->with('error','Email atau Password salah');

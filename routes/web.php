@@ -35,7 +35,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/employees/add', function () {
         return view('employees.formadd');
     });
-    Route::resource('employees', EmployeeController::class);
+
 });
 
+Route::resource('employees', EmployeeController::class);
 
